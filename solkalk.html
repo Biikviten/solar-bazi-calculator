@@ -28,10 +28,9 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            max-width: 100%;
             margin: 0;
             text-align: center;
-            background: url('https://images.unsplash.com/photo-1573164713988-8665fc963095') no-repeat center center fixed;
+            background: url('https://source.unsplash.com/1600x900/?fengshui,numerology,energy') no-repeat center center fixed;
             background-size: cover;
             color: white;
             height: 100vh;
@@ -39,6 +38,19 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 500px;
+        }
+        .calculator {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
         }
         input, button {
             margin: 10px;
@@ -61,19 +73,26 @@
     </style>
 </head>
 <body>
-    <h1>Калькулятор Солнечного Времени и Ба Цзы</h1>
-    
-    <h2>Пересчет солнечного времени в местное</h2>
-    <input type="text" id="city" placeholder="Введите город">
-    <button onclick="convertSolarTime()">Рассчитать</button>
-    <p id="solar_result"></p>
-    
-    <h2>Калькулятор Ба Цзы</h2>
-    <input type="date" id="birth_date">
-    <button onclick="calculateBaZi()">Рассчитать</button>
-    <p id="bazi_result"></p>
+    <div class="container">
+        <h1>Калькулятор Солнечного Времени и Ба Цзы</h1>
+        
+        <div class="calculator">
+            <h2>Пересчет солнечного времени в местное</h2>
+            <input type="text" id="city" placeholder="Введите город">
+            <button onclick="convertSolarTime()">Рассчитать</button>
+            <p id="solar_result"></p>
+        </div>
+        
+        <div class="calculator">
+            <h2>Калькулятор Ба Цзы</h2>
+            <input type="date" id="birth_date">
+            <button onclick="calculateBaZi()">Рассчитать</button>
+            <p id="bazi_result"></p>
+        </div>
+    </div>
 </body>
 </html>
+
 
 
 
